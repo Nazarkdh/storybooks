@@ -1,0 +1,34 @@
+<h1>Stories</h1>
+<div class="row">
+  {{#each stories}}
+<div class="col s12 m6">
+  <div class="card">
+    <div class="card-image">
+      {{#if (editIcon ../user.id this.userID)}}
+      <a href='/stories/edit/{{this.id}}' class="btn-floating halfway-fab waves-effect waves-light red"><i
+            class="material-icons">edit</i></a>
+    {{/if}}
+    </div>
+
+    <div class="card-content center-align">
+      <span class="card-title">{{this.title}}</span>
+      <p class="text-body">{{stripTags (truncate this.body 150) }}</p>
+       <br>
+         <a href="/stories/user/{{this.userID}}">
+         <div class="chip">
+            <img src="{{this.userImage}}" alt="author">
+            {{this.userName}} {{this.userLastname}}
+          </div>
+         </a> 
+        </a>
+
+        <div class="card-action">
+          <a href="/stories/show/{{this.id}}" class="btn grey">show more</a>
+        </div>
+
+       
+    </div>
+  </div>
+</div>
+  {{/each}}
+</div>

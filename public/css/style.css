@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.text-body{
+  height: 100px;
+}
+
+.inline{
+  display: inline;
+}
+
+.dash-status{
+  text-transform: capitalize;
+}
+
+.fa-pencil,.fa-remove{
+  margin-right: 5px;
+}
+
+
+
+

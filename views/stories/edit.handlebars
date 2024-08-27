@@ -1,0 +1,47 @@
+<h1>Edit Story</h1> 
+{{#if story}}
+    <div class="row">  
+      <form action="/stories/{{story.id}}?_method=put" method="POST" class="col s12"> 
+      <input type="hidden" name="_method" value="PUT">
+        <div class="row">  
+          <div class="input-field col s12">  
+            <input id="title" name="title" type="text" class="validate" value="{{story.title}}">  
+            <label for="title">Title</label>  
+          </div>  
+        </div>  
+    <div class="row"> 
+      <select name="status" > <option value="private" {{select 'private' story.status}} >Private</option> <option value="public" {{select 'public' story.status}} >Public</option> 
+      <option value="unpublished" {{select 'unpublished' story.status}}>unpublished</option> 
+      </select> 
+      <label for="status">Status</label>
+      </div>
+   <div class="row">  
+  <p>  
+    <label>  
+      <input type="checkbox" class="filled-in" name="allowComments" id="allowComments" {{#if story.allowComments}} checked {{/if}}>  
+      <span>allowComments</span>  
+    </label>  
+  </p>  
+</div> 
+</div>  
+<div class="row">  
+  <h5>Tell us your story:</h5>
+  <div class="input-field col s12">  
+    <textarea id="body" name="body" class="materialize-textarea" >{{story.body}}</textarea>  
+  </div>  
+</div>  
+      <div class="row">  
+          <button class="btn waves-effect waves-light" type="submit" name="action">Save  
+            <i class="material-icons right">send</i>  
+          </button>  
+        </div>  
+      </form>  
+    </div>  
+
+    {{else}}
+
+    <p>No story found</p>
+
+    {{/if}}
+
+      

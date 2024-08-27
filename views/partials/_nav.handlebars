@@ -1,0 +1,36 @@
+  <nav class="grey darken-3">
+    <div class="nav-wrapper container">
+      <a href="/" class="brand-logo">StoryBooks</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+             {{#if user}}  
+            <li><a href="/dashboard">Welcome, {{user.firstName}} {{user.lastName}}!</a></li>  
+              <li><a href="/stories" >Public Stories</a></li> 
+            <li><a href="/dashboard">Dashboard</a></li>  
+            <li><a href="/stories/my">My Stories</a></li> 
+              <li><a href="/auth/logout">Logout</a></li>   
+          {{else}}  
+            <li><a href="/auth/google"><i class="fa-solid fa-sign-in fa-2sm mx-2 " style="margin-right:10px;"></i><span >Login</span></a></li>  
+            <li><a href="/stories"><i class="fa-solid fa-book-medical fa-2sm" style="margin-right:10px;"></i>Public Stories</a></li>  
+          {{/if}}  
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+         {{#if user}}  
+            <li ><a href="/dashboard" >Welcome, {{user.firstName}} {{user.lastName}}!</a></li>  
+              
+               <li><a href="/stories" ><i class="fa-solid fa-book-medical"></i>Public Stories</a></li> 
+            <div class="divider"></div>
+            <li><a href="/dashboard"><i class="fa-solid fa-gear"></i>Dashboard</a></li>  
+            <li><a href="/stories/my"><i class="fa-solid fa-user"></i>My Stories</a></li> 
+            <li><a href="/auth/logout" >Logout <i class="fa-solid fa-sign-out "></i></a></li> 
+          {{else}}  
+            <li><a href="/auth/google" ><i class="fa-solid fa-sign-in"></i>Login</a></li>  
+            <li><a href="/stories" ><i class="fa-solid fa-book-medical"></i>Public Stories</a></li> 
+            <hr class="">
+          {{/if}}  
+  </ul>
+
+   

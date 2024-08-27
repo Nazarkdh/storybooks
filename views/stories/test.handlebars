@@ -1,0 +1,35 @@
+<h1>Stories</h1>
+<div class="row">
+  {{#each stories}}
+  <div class="col s12 m4">
+    <div class="card">
+      <div class="card-image">
+        <a href='/stories/edit/{{this.id}}' class="btn-floating halfway-fab waves-effect waves-light red"><i
+            class="material-icons">edit</i></a>
+      </div>
+      <div class="card-content center-align">
+        <span class="card-title center-align">{{this.title}}</span>
+        <p>{{this.body}}</p>
+        <br>
+        <a href="/users/show/{{this.userID}}">
+          <div class="chip">
+            <img src="{{this.userImage}}" alt="author">
+            {{this.userName}} {{this.userLastname}}
+          </div>
+        </a>
+        <div class="card-action">
+          <a href="/stories/show/{{this.id}}" class="btn grey">show more</a>
+        </div>
+        <div class="card-action">
+          <textarea class="materialize-textarea" placeholder="Add your comment..."></textarea>
+          <a class="btn">Submit</a>
+        </div>
+
+
+        {{else}}
+        <p>No stories</p>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
