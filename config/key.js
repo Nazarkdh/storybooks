@@ -1,10 +1,10 @@
 
 let key;
 
-if(process.env.NODE_ENV==='development'){
+if(process.env.NODE_ENV==='production'){
     key=require('../config/keys_prod')
 }else{
-    //key=require('../config/keys_dev')
+    key=require('../config/keys_dev')
 }
 
 
