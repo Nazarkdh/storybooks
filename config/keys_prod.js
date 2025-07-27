@@ -4,5 +4,7 @@ const key={
     clientSecret:process.env.CLIENT_SECRET
 }
 
+console.log(key.mongoURI);
+
 
 module.exports=key;
