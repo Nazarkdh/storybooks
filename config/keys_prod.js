@@ -4,7 +4,7 @@ const key={
     clientSecret:process.env.CLIENT_SECRET
 }
 
-console.log("client ID: "+key.clientId);
+console.log("url: "+process.env.PUBLIC_BASE_URL);
 
 
 module.exports=key;
