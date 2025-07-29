@@ -11,7 +11,6 @@ const methodOverride=require('method-override');
 
 
 const app=express();
- require('dotenv').config(); 
 
 const PUBLIC_BASE_URL = process.env.PUBLIC_BASE_URL;
 
