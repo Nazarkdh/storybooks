@@ -20,6 +20,7 @@ if (!PUBLIC_BASE_URL) {
     // In production, you might want to gracefully exit or prevent startup
     process.exit(1);
 }
+console.log('Production Public Base URI for Google Auth:', PUBLIC_BASE_URL);
 
 
 //load key
