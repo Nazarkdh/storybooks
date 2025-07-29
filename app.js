@@ -12,15 +12,6 @@ const methodOverride=require('method-override');
 
 const app=express();
 
-const PUBLIC_BASE_URL = process.env.PUBLIC_BASE_URL;
-
-if (!PUBLIC_BASE_URL) {
-    console.error('CRITICAL ERROR: PUBLIC_BASE_URL environment variable is not set!');
-    // In production, you might want to gracefully exit or prevent startup
-    process.exit(1);
-}
-console.log('Production Public Base URI for Google Auth:', PUBLIC_BASE_URL);
-
 
 //load key
 const key=require('./config/key')
